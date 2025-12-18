@@ -1,0 +1,27 @@
+.page{
+  width: 100vw;
+  height: calc( 100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #F0F2F5;
+}
+.rightBox{
+  width: 80vw;
+  height: auto;
+  min-height: 200px;
+}
+/* .page button{
+  width: 200px;
+  height: 200px;
+  background: black;
+  border-radius: 10px;
+  margin: 0 10px;
+  color: white;
+  font-size: 1.2rem;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+.page button:hover{
+  transform: scale(1.1);
+} */

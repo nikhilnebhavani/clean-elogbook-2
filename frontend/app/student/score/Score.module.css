@@ -1,0 +1,204 @@
+.main{
+    background: #F0F2F5;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden !important;
+    padding-bottom: 20px;
+}
+.heading{
+    width: 100vw;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 50px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+}
+.heading img{
+    margin-right: 20px;
+}
+
+/* Actions section styles */
+.actionsSection {
+    width: calc(100vw - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    margin-top: 30px;
+}
+.actionsSection div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actionsButton {
+    min-width: 200px;
+    height: 40px;
+    padding: 5px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actionsButton img{
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+.actionsSection div select{
+    width: 200px;
+    height: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline:none;
+}
+.actionsSection div label{
+    margin-right: 10px;
+}
+
+
+/* Table styles */
+.tableSection {
+    border-radius: 10px;
+    width: calc(100vw - 40px);
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: white;
+
+}
+
+.tableHead {
+    background-color: white;
+}
+.tableHeading{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background: white;
+    padding: 10px 0;
+}
+.tableCell {
+    width: auto;
+    border: .5px solid black;
+    padding: 10px;
+    height: 30px;
+}
+.tableCell a{
+    color: blue;
+    text-decoration: none;
+}
+.nofound{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.nofound p{
+    margin-top: 40px;
+    font-size: 2rem;
+}
+.verified{
+    color: green;
+}
+.edit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image {
+  width: 25px;
+  height: 25px;
+  background-image: url("/icons/edit_static.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.image:hover {
+  background-image: url("/icons/edit.gif");
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        width: 100vw;
+    }
+    .heading {
+        font-size: 1.5rem;
+    }
+    .actionsButton {
+        min-width: 150px;
+    }
+
+    .tableSection {
+        width: calc(100vw - 40px);
+    }
+    .tableCell {
+        width: auto; /* Allow table cells to adjust */
+        white-space: normal; /* Allow line breaks */
+        padding: 5px;
+    }
+    .table {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+    .tableHeading {
+        font-size: 1.2rem; /* Adjust heading size for smaller screens */
+    }
+    
+}
+
+
+/* Top band colors */
+.table thead tr:first-child th:nth-child(3),
+.table thead tr:first-child th:nth-child(4),
+.table thead tr:first-child th:nth-child(5) {
+  background: #e696a0;
+  color: #fff;
+}
+.table thead tr:first-child th:nth-child(6),
+.table thead tr:first-child th:nth-child(7),
+.table thead tr:first-child th:nth-child(8) {
+  background: #ecbc5e;
+  color: #fff;
+}
+.table thead tr:first-child th:nth-child(9),
+.table thead tr:first-child th:nth-child(10),
+.table thead tr:first-child th:nth-child(11) {
+  background: #84b878;
+  color: #fff;
+}
+
+/* 1..9 header row */
+.table thead tr:nth-child(2) th {
+  background: #e6e6e6;
+}
+
+/* generic table cell styling if you don't have it */
+.tableCell {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+.tableHead .tableCell {
+  font-weight: 600;
+}

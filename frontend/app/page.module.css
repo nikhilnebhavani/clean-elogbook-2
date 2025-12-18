@@ -1,0 +1,265 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.h_screen {
+    width: 65vw;
+    height: 100vh;
+}
+
+.h_screen img {
+    width: 65vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.signin_sec {
+    width: 35vw;
+    height: 100vh;
+    background: #F0F2F5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    position: absolute;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+    margin-top: 2vh;
+}
+
+.signintxt {
+    width: 30vw;
+    max-width: 500px;
+    height: auto;
+    align-self: center;
+    background: white;
+    z-index: 999;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    left: -20%;
+    border-radius: 10px;
+    padding: 50px 0;
+}
+
+
+
+.signintxt div {
+    width: 80%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.signintxt h2 {
+    font-size: 2rem;
+    text-align: left;
+}
+
+.signintxt p {
+    font-size: 1rem;
+    margin-top: 2%;
+    text-align: left;
+}
+
+.signin_btn {
+    cursor: pointer;
+    width: 80%;
+    height: 45px;
+    display: flex;
+    border: 2px solid #E6E8E7;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+}
+.signin_btn:hover{
+    border: 2px solid black;
+}
+.signin_btn img {
+    width: auto;
+    height: 80%;
+    margin-right: 10px;
+}
+
+.signin_btn p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+.or{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.login_form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.login_form p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: red;
+}
+.login_form input{
+    width: 90%;
+    height: 45px;
+    border: 2px solid #E6E8E7;
+    background: none;
+    padding: 0 5%;
+    color: black;
+    margin-bottom: 20px;
+    outline: none;
+    border-radius: 10px;
+    transition-duration: .2s;
+    font-size: 1rem;
+}
+.login_form input:focus{
+    border: 2px solid rgb(110, 110, 110);
+}
+.login_form button{
+    width: 100%;
+    height: 45px;
+    margin-top: 5px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition-duration: .3s;
+}
+.login_form button:hover{
+    font-size: 1.1rem;
+}
+.forgot{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-offset: 5px;
+}
+
+
+.flex {
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+    .main {
+      width: 100vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+  
+    .flex {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .h_screen {
+      width: 100vw;
+      height: 45vh;
+    }
+  
+    .h_screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .signin_sec {
+      width: 100vw;
+      height: auto;
+      background-color: white;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      position: relative;
+      top: -20px;
+      padding: 10px 0 30px 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .signintxt {
+      width: 90%;
+      max-width: 95%;
+      position: relative;
+      left: 0;
+      top: 0;
+      background: white;
+      border-radius: 15px;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+  
+    .signintxt div {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .signintxt h2 {
+      font-size: 1.8rem;
+    }
+  
+    .signintxt p {
+      font-size: 1rem;
+    }
+  
+    .signin_btn {
+      width: 100%;
+      height: 45px;
+    }
+  
+    .signin_btn img {
+      height: 70%;
+      margin-right: 8px;
+    }
+  
+    .signin_btn p {
+      font-size: 1rem;
+    }
+  
+    .or {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    .login_form {
+      width: 100%;
+      padding: 0;
+    }
+  
+    .login_form input {
+      width: 90%;
+      padding: 0 12px;
+      font-size: 1rem;
+    }
+  
+    .login_form button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  
+    .forgot {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  
+    .logo {
+      display: none;
+    }
+  }
+  

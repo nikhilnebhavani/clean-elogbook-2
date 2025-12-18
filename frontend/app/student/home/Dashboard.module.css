@@ -1,0 +1,239 @@
+.main{
+    background: #F0F2F5;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden !important;
+    padding-bottom: 20px;
+}
+
+.main .error{
+  width: 80vw;
+  height: auto;
+  border-radius: 10px;
+  background: rgb(156, 58, 58);
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.heading{
+    width: 100vw;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 50px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+}
+.heading img{
+    margin-right: 20px;
+}
+/* Search section styles */
+.searchSection {
+    width: calc(96% - 40px);
+    margin-left: 2%;
+    margin-top: 50px;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    height: auto;
+    min-height: 60px;
+    align-items: center;
+}
+.searchSection div{
+    position: relative;
+    width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+}
+.searchSection div label{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.searchInput {
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.searchButton {
+    width: calc(25% - 20px);
+    height: 40px;
+    padding: 5px 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition-duration: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchButton img{
+    width: 25px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Actions section styles */
+.actionsSection {
+    width: calc(100vw - 40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    margin-top: 30px;
+}
+.actionsSection div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionsButton {
+    min-width: 200px;
+    height: 40px;
+    padding: 5px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.actionsButton img{
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+.actionsSection div select{
+    width: 200px;
+    height: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    background: white;
+    outline:none;
+    margin-left: 10px;
+}
+.actionsSection div label{
+    font-size: 1rem;
+    min-width: fit-content;
+}
+
+
+/* Table styles */
+.tableSection {
+  border-radius: 10px;
+  overflow-x: auto; /* Enable horizontal scroll */
+  width: calc(100vw - 40px);
+  margin-left: 20px;
+  border: 1px solid black;
+}
+
+.table {
+  width: max-content; /* Allow table to expand beyond parent if needed */
+  border-collapse: collapse;
+  text-align: left;
+  background: white;
+}
+
+
+.tableHead {
+    background-color: white;
+}
+
+.tableCell {
+    width: max-content;
+  border: 0.5px solid black;
+  padding: 10px;
+  height: 30px;
+  white-space: nowrap;     /* Prevent line breaks */
+  overflow: hidden;        /* Optional: hides overflow */
+  text-overflow: ellipsis;
+}
+.tableCell a{
+    color: blue;
+    text-decoration: none;
+}
+.nofound{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.nofound p{
+    margin-top: 40px;
+    font-size: 2rem;
+}
+.verified{
+    color: green;
+}
+.edit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image {
+  width: 25px;
+  height: 25px;
+  background-image: url("/icons/edit_static.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.image:hover {
+  background-image: url("/icons/edit.gif");
+}
+
+
+@media screen and (max-width: 768px) {
+    .searchSection div{
+        width: calc(100% - 20px);
+    }
+    .searchButton {
+        width: calc(100% - 20px);
+    }
+    .actionsButton {
+        min-width: calc(100% - 20px);
+    }
+    .actionsSection div select{
+        width: calc(100% - 20px);
+    }
+    .actionsSection div label{
+        margin-right: 0;
+    }
+    .tableCell {
+        width: auto; /* Allow table cells to adjust */
+        white-space: normal; /* Allow line breaks */
+    }
+    .tableSection {
+        width: calc(100vw - 40px);
+        margin-left: 20px;
+    }  
+    
+}

@@ -1,0 +1,838 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.downloadButton,
+.uploadButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.downloadButton:hover,
+.uploadButton:hover {
+  background-color: #1565c0;
+}
+
+.downloadButton:disabled,
+.uploadButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.instructions {
+  background-color: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-top: 2rem;
+}
+
+.instructions h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.instructions ol {
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.loading {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.formContainer {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.formHeader h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #777;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.closeButton:hover {
+  color: #000;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.formGroup select,
+.formGroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.formGroup select:disabled,
+.formGroup input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.formActions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.blackButton {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.blackButton:hover {
+  background-color: #333;
+}
+
+.blackButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.cancelButton:hover {
+  background-color: #eaeaea;
+}
+
+.actionButton {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+}
+
+.actionButton:hover {
+  background-color: #1976d2;
+}
+
+.removeButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  margin-top: 5px;
+  display: block;
+}
+
+.removeButton:hover {
+  background-color: #d32f2f;
+}
+
+.removeButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 8px;
+}
+
+/* Search Styles */
+.searchContainer {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.searchContainer h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.searchForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.searchGroup {
+  margin-bottom: 15px;
+}
+
+.searchGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.searchGroup select,
+.searchGroup input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.searchGroup select:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.resultsContainer {
+  margin-top: 20px;
+}
+
+.resultsContainer h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.noResults {
+  color: #777;
+  font-style: italic;
+}
+
+.resultsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resultsTable th,
+.resultsTable td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.resultsTable th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+  color: #333;
+  position: sticky;
+  top: 0;
+}
+
+.resultsTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.subjectsList {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.subjectsList li {
+  margin-bottom: 5px;
+}
+
+.mainBox {
+  background: #f0f2f5;
+  width: 100%;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.head {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.head button {
+  width: auto;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+  color: white;
+  background: black;
+}
+
+.head button img {
+  margin-right: 10px;
+}
+
+.head button:hover {
+  font-size: 1.1rem;
+}
+
+.error {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  background: rgb(156, 58, 58);
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.form {
+  width: 80%;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  transition-duration: .5s;
+}
+
+.form div {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  transition-duration: .3s;
+}
+
+.form input {
+  width: calc(100% - 20px);
+  height: 40px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.form input:focus {
+  border: 1px solid black;
+}
+
+.form input:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.form div label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.form button {
+  width: 30%;
+  height: 50px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 50px 10px;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+}
+
+.form button img {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.form button:hover {
+  font-size: 1.1rem;
+}
+
+.searchButton {
+  width: 120px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  margin: 50px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+}
+
+.searchButton:hover {
+  font-size: 1.1rem;
+}
+
+.resetButton {
+  width: 120px;
+  background: #757575;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  margin: 50px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+}
+
+.resetButton:hover {
+  font-size: 1.1rem;
+}
+
+.tableSection {
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background: white;
+}
+
+.tableHead {
+  background-color: white;
+}
+
+.tableCell {
+  width: auto;
+  border: .5px solid black;
+  padding: 10px;
+  height: 30px;
+}
+
+.tableCell ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tableCell li {
+  margin-bottom: 5px;
+}
+
+.tableCell button {
+  width: 100px;
+  height: 30px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+.tableCell button:hover {
+  font-size: 1.1rem;
+}
+
+.nofound {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.nofound p {
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.edit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 25px;
+  height: 25px;
+  background-image: url("/icons/edit_static.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.image:hover {
+  background-image: url("/icons/edit.gif");
+}
+
+/* Action buttons */
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.editButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.editButton:hover {
+  background-color: #3e8e41;
+}
+
+.activeButton {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeButton:hover {
+  background-color: #366dca;
+}
+
+.inactiveButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inactiveButton:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .submitButton {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+  
+  .form div {
+    width: 100%;
+  }
+  
+  .form button {
+    width: 100%;
+  }
+}
+
+.addButton {
+  width: auto;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+  color: white;
+  background: black;
+  margin: 20px;
+}
+
+.addButton img {
+  margin-right: 10px;
+}
+
+.addButton:hover {
+  font-size: 1.1rem;
+}
+
+.submitButton {
+  width: 30%;
+  height: 50px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 50px 10px;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+}
+
+.submitButton img {
+  margin-right: 10px;
+}
+
+.submitButton:hover {
+  font-size: 1.1rem;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 2px;
+  vertical-align: middle;
+  transition: opacity 0.2s;
+  opacity: 0.7;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+}
+
+.selectedStudents {
+  width: 100% !important;
+  margin: 20px 0;
+}
+
+.selectedStudentsList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selectedStudentItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f0f2f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.removeStudentButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.actions {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+}
+
+.downloadButton,
+.uploadButton {
+  width: auto;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+  color: white;
+  background: black;
+}
+
+.downloadButton:hover,
+.uploadButton:hover {
+  font-size: 1.1rem;
+}
+
+.downloadButton:disabled,
+.uploadButton:disabled {
+  background: #757575;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 90%;
+  }
+
+  .form div {
+    width: 100%;
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .actions {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .downloadButton,
+  .uploadButton {
+    width: 100%;
+  }
+} 

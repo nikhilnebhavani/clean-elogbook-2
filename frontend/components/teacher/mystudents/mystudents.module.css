@@ -1,0 +1,72 @@
+.mainBox{
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+.header{
+    width: calc(100% - 40px);
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header button{
+    width: 200px;
+    height: 30px;
+    border: none;
+    background: black;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.header label select{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 0 10px;
+}
+.tableSection {
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: white;
+
+}
+
+.tableHead {
+    background-color: white;
+}
+
+.tableCell {
+    width: auto;
+    border: .5px solid black;
+    padding: 10px;
+    height: 30px;
+}
+
+.nofound{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.nofound p{
+    margin-top: 40px;
+    font-size: 2rem;
+}
+

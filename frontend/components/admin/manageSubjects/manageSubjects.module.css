@@ -1,0 +1,290 @@
+.mainBox {
+  background: #f0f2f5;
+  width: 100%;
+  max-height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.head {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.head button {
+  width: auto;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0 20px;
+  color: white;
+  background: black;
+}
+
+.head button img {
+  margin-right: 10px;
+}
+
+.head button:hover {
+  font-size: 1.1rem;
+}
+
+.mainBox .error {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  background: rgb(156, 58, 58);
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.form {
+  width: 80%;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  transition-duration: .5s;
+}
+
+.form div {
+  width: 30%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  position: relative;
+  transition-duration: .3s;
+}
+
+.form input, .form select {
+  width: calc(100% - 20px);
+  height: 40px;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 5px;
+  appearance: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.form input:focus, .form select:focus {
+  border: 1px solid black;
+}
+
+.form div label {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.form input[type="file"] {
+  display: none;
+}
+
+.file_label {
+  width: calc(100% - 20px);
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid rgb(175, 175, 175);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.file_label img {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.file_label:hover {
+  border: 1px solid black;
+}
+
+.form button {
+  width: 30%;
+  height: 50px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 50px 10px;
+  font-size: 1rem;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .3s;
+}
+
+.form button img {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.form button:hover {
+  font-size: 1.1rem;
+}
+
+.searchButton {
+  max-width: 200px;
+  transition-duration: .3s;
+}
+
+.tableSection {
+  border-radius: 10px;
+  overflow: hidden;
+  width: calc(100% - 40px);
+  margin-left: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  transition-duration: .3s;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background: white;
+}
+
+.tableHead {
+  background-color: white;
+}
+
+.tableCell {
+  width: auto;
+  border: .5px solid black;
+  padding: 10px;
+  height: 30px;
+}
+
+.tableCell button {
+  width: 100px;
+  height: 30px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: .3s;
+}
+
+.tableCell button:hover {
+  font-size: 1.1rem;
+}
+
+.nofound {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.nofound p {
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.editButton {
+  background: #4CAF50 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.activeButton {
+  background: #2196F3 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.inactiveButton {
+  background: #FF9800 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.deleteButton {
+  background: #f44336 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.userInfo {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.userInfo:hover span {
+  color: blue;
+  text-decoration: underline;
+}
+
+.table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .mainBox {
+    padding: 10px;
+  }
+  
+  .tableCell {
+    padding: 10px;
+    font-size: 14px;
+  }
+} 

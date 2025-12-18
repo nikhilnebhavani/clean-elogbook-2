@@ -1,0 +1,24 @@
+ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+}
+li {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+li:hover{
+  background: #f0f0f0;
+}
